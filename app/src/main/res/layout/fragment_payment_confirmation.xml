@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_solid_white"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_smile" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView android:id="@+id/total_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:textColor="@color/pm_dark"/>
+
+            <TextView
+                android:id="@+id/total_amount"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="@color/pm_dark"/>
+
+            <View
+                style="@style/bg_line"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/balance_amount_lay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:text="Pay with balance"
+                android:textColor="@color/pm_dark" />
+
+            <TextView
+                android:id="@+id/balance_amount"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:text="-$0"
+                android:textColor="@color/primary" />
+
+            <View
+                style="@style/bg_line"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/deduct_amount_lay"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:text="Promo Code"
+                android:textColor="@color/pm_dark" />
+
+            <TextView
+                android:id="@+id/deduct_amount"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:textColor="@color/primary" />
+
+            <View
+                style="@style/bg_line"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:text="Total"
+                android:textColor="@color/pm_dark"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/final_amount"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:textColor="@color/pm_dark"
+                android:textSize="22sp" />
+            <View style="@style/bg_line"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="3dp"
+                android:text="* "
+                android:textColor="@color/primary" />
+
+            <TextView android:id="@+id/chargeTip"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/pm_gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="3dp"
+            android:text="* "
+            android:textColor="@color/primary" />
+        <TextView android:id="@+id/payment_tip"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/pm_gray"
+            android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_solid_primary"
+            android:gravity="center"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</FrameLayout>

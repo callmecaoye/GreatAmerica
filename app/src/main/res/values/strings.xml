@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">Promeets</string>
+    <string name="facebook_app_id">568032243396925</string>
+    <item name="category" type="id" />
+    <string name="no_wishlist">You don\'t have experts in your wishlist at the moment, go find one now!</string>
+    <string name="about_us_text">ProMeets is an innovative knowledge sharing platform where experts and talents like you can share valuable experiences and offer professional advice to others. Unlike online meetings or phone calls, we believe face-to-face communications will make the consulting experiences more unique and efficient. Join us today as an Expert and get paid for your knowledge and experience! </string>
+    <string name="google_android_map_api_key">AIzaSyAdEiNSFeoJ_KsSfsuReeCZDyTvZHluj7k</string>
+    <string-array name="duration_arrays">
+        <item>0.5 hour</item>
+        <item>1 hour</item>
+        <item>1.5 hours</item>
+        <item>2 hours</item>
+        <item>2.5 hours</item>
+        <item>3 hours</item>
+        <item>3.5 hours</item>
+        <item>4 hours</item>
+        <item>4.5 hours</item>
+        <item>5 hours</item>
+        <item>5.5 hours</item>
+        <item>6 hours</item>
+    </string-array>
+
+    <string name="invalid_email_id">Please enter a valid email address.</string>
+    <string name="invalid_phone_number">Please enter a valid phone number.</string>
+    <string name="invalid_password">A password must contain minimum 6 characters.</string>
+    <string name="invalid_password_mesg">Enter a valid password.</string>
+    <string name="invalid_code">Please enter a valid code.</string>
+    <string name="password_changed">Successfully changed your password.</string>
+    <string name="password_error">between 4 and 10 alphanumeric characters</string>
+    <string name="no_internet">Please check your Internet connection.</string>
+    <string name="please_wait">Please wait! We are processing your request.</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="verification_code_mesg">Verification code has been sent to you. Please verify your identity.</string>
+    <string name="info">Info!</string>
+    <string name="error">Error!</string>
+    <string name="promeets_policy">I accept PROMEETS\'s Terms of Use and Privacy Policy</string>
+    <string name="promeets_policy_error">You must agree to our term and condition before signup.</string>
+    <string name="account_verified">Your account has been verified.</string>
+
+    <string name="special_selection">Special Selection</string>
+    <string name="recommended">Recommended</string>
+    <string name="view_all_category">View all category</string>
+    <string name="comprihensive_ranking">Comprehensive Ranking</string>
+    <string name="meet_the_most">Meet The Most</string>
+    <string name="highest_score">Highest Score</string>
+    <string name="the_lowest_price">The Lowest Price</string>
+    <string name="refund"><u>Request a Refund</u></string>
+
+    <string name="promeets_terms">Terms of Use
+        \n
+        \nYour usage, review and interaction with Promeets Technologies Inc.’s website (www.promeets.us, hereinafter referred to as the “Website”) are subject to the following Terms of Use (”TOU”).  Promeets Technologies, Inc. (the “Company”) reserves the right to update the TOU at any time without notice to you.
+        Website is a platform of experts, specialists, consultants, professionals and other people with specialized expertise in certain areas. (hereinafter referred to as “Experts”.) By using Website, you ("User") agree to the following Terms and Conditions of use.
+        \n
+        \nSection One User’s Information
+        \n1.  User\'s personal information. User personal information includes but not limited to: the user\'s real name, occupation, job, mobile phone, bank account number, third-party payment account, e-mail, education background, business experience.
+        \n2.  Non-user personal information. Users Non-user personal information includes but not limited to: expert topics, operating status, use of records, habits, etc. All information other than the personal information of the users listed in paragraph 1.1 of this Article shall be treated as non-user personal information.
+        \n3.  Registration Information. User’s registration information includes the account name, user profiles and other content shall be in compliance with applicable law. The company has the right not to register the account with any illegal or inappropriate information.
+        \n4.  Company does not claim ownership of the materials (the “Materials”) you provide to Company.  However, by posting, uploading, inputting, providing or submitting (“Posting”) the Materials, you grant Company and its affiliates permission to use your Materials in connection with the operation of the Website and providing the Service, including, without limitation, the rights to copy, distribute, transmit, publicly display, publicly perform, reproduce, edit, modify, translate and reformat the Materials; to publish your identity in connection with your Materials; and the right to sublicense such rights to any service provider of Company.  No compensation will be paid with respect to the use of the Materials. Company is under no obligation to use any Materials you may provide and Company may remove any Materials at any time in its sole discretion for any reason or no reason at all, with or without notice.
+        \n5.  By submitting any Materials to Company or Website, (i) you represent and warrant that you own or otherwise control all of the necessary rights to the Materials including, without limitation, all the rights necessary for you to provide, post, upload, input or submit the Materials, (ii) you represent and warrant that you either own all the applicable copyright or have all the appropriate license(s) to use and post such Content on the Website and that none of the Content is violent, offensive, obscene, invades anyone’s rights (including, but not limited to, intellectual property right, right of privacy and right of publicity) or violates any applicable laws, rules or regulations; (ii) you grant Company and its affiliates and service providers an irrevocable, perpetual, royalty free, fully paid, worldwide, license, with the right to sublicense, to post, edit, modify, create derivative works from, duplicate, distribute, publicly display and publicly perform said Content anywhere in the world, in any format; (iii) you agree to notify Company of any illegal conduct that you observe in connection with your account or Materials you submit, (iii) you allow Company to delete said Content at any time for any reason or no reason at all.
+        \n6.  The User shall not use the e-mail addresses provided on the Website for junk mail, chain letters or spamming or the transmission of any unlawful, harassing, libelous, abusive, threatening, harmful, vulgar, obscene or otherwise objectionable material or any kind or nature. The User may not use the Website’s information to make any speculative, false or fraudulent Requests or Offers, whether or not in anticipation of demand. Furthermore, the User shall not use the information or any content that is obscene, indecent, seditious, offensive, defamatory, threatening, or which incites or results in causing racial hatred, discrimination, menace or breach of confidence.
+        \n7.  If any User provides any information that is untrue, inaccurate or is not current or complete, or if the Website has reasonable grounds to suspect that such information is untrue, inaccurate or is not current or complete, The Website has the right to suspend or terminate such User\'s membership or any other services that offered by the Company. In addition, each User agrees to indemnify the Company and the Website, its employees, agents and representatives and to hold them harmless, from any and all losses, claims and liabilities (including reasonable legal expenses on a full indemnity basis) which may arise from User\'s breach of these terms and conditions.
+        \n8.  Each User further agrees that the Website is not responsible, and shall bear no liability to it or anyone else for any material submitted by such User or third parties, including misleading, fraudulent, defamatory, inaccurate, offensive or any other illicit materials whatsoever.
+        \n9.  Users should maintain security and confidentiality of their own account and password on the website, and should take full responsibility for all acts on the website and mobile application. The user may not lend the account to others to use, otherwise it should bear all the possible responsibilities, and with the actual users bear joint and several liability. When the password or account is unauthorized use, or any security issues occur, the user has the responsibility to promptly and effectively notify the Website and report to the law enforcement authorities.
+        \n10. The User shall not use any device, software or routine to interfere or attempt to interfere with the proper working of the Website. Each User shall not undermine or attempt to undermine the security or integrity of the computer systems or networks used by the Website and shall not attempt to gain unauthorized access to such computer systems or networks. The User shall not use the Website for any illegal purposes or in support of any illegal purpose or activity.
+
+        \n
+                \nSection Two Service
+        \nThe term "service" as used in this Agreement refers specifically to the behavior of conversation services provided through the Website and its mobile application. All service transactions must be completed through the Website or its mobile application but not in private transactions. In the event of a breach, the Company has the right to refuse to pay the transaction amount, impose a penalty and suspend or permanently close the violator’s account.
+        \n2.1     The conversation subject of experts, price, quantity are published by Experts at any time and may be subject to change, there is no special notice for such changes. For some unpredictable and objective reasons, such information may be a lag or error. The Website has no responsibility for such inaccuracy.
+        \n2.2     Once an order is created, the User will be asked to confirm the content, quantity, price, payment method, contact person, contact information, contact address, appointment time and place of purchase. Such an order deemed to be a contract offer to an Expert by a User.
+        \n2.3     Upon receipt of the User\'s contract offer, the Expert has the right to review the application for appointment of the User, to exercise his or her right to make an appointment or deny the appointment. Only if an Expert accepts the order and agrees to provide the actual conversation service on a defined subject, a contractual relationship is established.
+        \n2.4     After the confirmation of the meeting for the conversation service, Users shall make service payment as soon as possible. User may apply for cancellation of the appointment until 24 hours before the date of appointment. Otherwise, the User will be obligated to pay the appointment fee to the expert and the fee is not refundable.
+        \n2.5     Except for force majeure factors, the User will be obligated to pay the full fee to the Expert for the delay of half an hour or longer or no showing. Except for force majeure factors, if Expert is late for half an hour or more or no showing, User has the right to request cancellation of the order, and request a full refund of the appointment fee.
+        \n2.6     An Expert should ensure that he or she has the relevant professional knowledge or experience in his / her field of expertise.  However, the Website hereby declares that it does not guarantee that the results of the appointment will meet the User\'s expectations.
+        \n2.7     The advice and experience provided by the Experts are personal recommendations and experience. Users need to know and agree that such advice and personal experience are for reference only. If User use such advice as a basis for decision-making, the Website shall not be responsible for any loss or damages or any other claims that arise from the use of such advice. Users hereby declares that he or she will not seek any compensation from the Website.
+        \n2.8     The User and Experts should determine their own places of meetings, in order to ensure the safety of the User and Experts, the Website requires that the meeting must be in public places; Users that are under 18 years old must be accompanied by their parent or legal Guardian. The Website does not assume any security responsibilities.
+        \n2.9     Users and Experts shall respect each other in the conversation service and in any follow-up communication.  If any party plans to record audio and video during the conversation, the party should obtain the permission or consent of the other party. Each party may not intimidate, threaten or harass the other party in language or behavior, or violate or attempt to violate the privacy of the others. If the Expert initiates such behavior, the User has the right to immediately terminate the meeting and request for a refund; if the User initiates such behavior, the Expert has the right to immediately terminate the meeting and the User has no right of refund. The Website respects the facts and the basis of the law in a reasonable form to support the rights of the infringed party.
+        \n
+                \nArticle Three Fees, Payment and Tax Payment
+        \n3.1     If a User needs to use the conversation service provided by the Expert, he/she must irrevocably authorize the Website to make the payment for the service of the Expert when the Expert provides such service.
+        \n3.2     The User must comply with the Website’s pricing rules. The Experts has the right to set, adjust the price for each conversation topics. The Experts also irrevocably authorizes the Website to collect the conversation service fees on behalf of themselves.
+        \n3.3     The Website has the right to adjust the method to collect the service fees of the Experts, it will be based on the published payment rules or the agreement between the relevant Experts and the Website.
+        \n3.4     Users shall comply with the pricing rules of the Website. Users are required to pay the service fee to the Website’s bank account within 24 hours after the appointment is established.
+        \n3.5     In order to ensure and effectively monitor the quality of service, service fees that from the Users will be initially collected by a third party to be held in escrow.  After User receives services from the Expert, User should provide prompt feedback to the Company within seven (7) business days.  If User provides positive feedback or fails to provide any feedback within seven (7) business days, service fees will be released to the Expert.
+        \n3.6     Users are required to submit their negative feedback to the Company in writing within 72 hours after the meeting is completed.  The Company will conduct its own investigation and make final decision as to how the resolve the negative feedback in its sole and absolute discretion, which decision shall be binding upon the relevant Expert and User.
+        \n
+                \nArticle Four Disclaimer
+        \n4.1 WARRANTY
+        \nUSER ACKNOWLEDGES AND AGREES THAT EXPERTS ARE NEITHER EMPLOYEES NOR AGENTS NOR REPRESENTATIVES OF COMPANY, AND COMPANY ASSUMES NO RESPONSIBILITY FOR ANY ACT OR OMISSION OF ANY SUCH EXPERT. COMPANY DOES NOT WARRANT THAT THE SERVICES PROVIDED BY EXPERT WILL BE FREE FROM BIAS, DEFECTS, ERRORS, EAVESDROPPING OR LISTENING. COMPANY TAKES NO RESPONSIBILITY FOR VERIFYING THE SKILLS, DEGREES, QUALIFICATIONS, CREDENTIALS OR BACKGROUND OF ANY EXPERTS. AS FURTHER DESCRIBED IN THIS AGREEMENT, COMPANY MAKES NO REPRESENTATION OR WARRANTY WHATSOEVER AS TO (A) THE WILLINGNESS OR ABILITY OF ANY EXPERT TO GIVE ADVICE, (B) WHETHER THE USER SHALL FIND AN EXPERT\'S ADVICE RELEVANT, USEFUL, ACCURATE OR SATISFACTORY, (C) WHETHER THE ADVICE OF THE EXPERT WILL BE RESPONSIVE OR RELEVANT TO THE USER\'S QUESTION, OR (D) WHETHER THE EXPERT\'S ADVICE WILL OTHERWISE BE SUITABLE TO THE USER\'S NEEDS. IT IS STRONGLY RECOMMENDED THAT THE USER INDEPENDENTLY VERIFY THE SKILLS, DEGREES, QUALIFICATIONS, CREDENTIALS AND BACKGROUND OF EACH EXPERT FROM WHOM HE OR SHE RECEIVES OR CONTEMPLATES TO RECEIVE ADVICE OR SERVICES.
+        \nTHIS WEBSITE IS PROVIDED "AS IS" AND "AS AVAILABLE."  THE WEBSITE DOES NOT WARRANT THE ACCURACY, ADEQUACY OR COMPLETENESS OF ANY OF THE CONTENT OR MATERIAL IN THIS WEBSITE, ANY OF THE DATA LINKED TO THIS WEBSITE, ANY DATA ON THIS WEBSITE OR ANY OTHER SERVICE PROVIDED HEREIN. ALL EXPRESS AND IMPLIED WARRANTIES, INCLUDING THE WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT OF PROPRIETARY RIGHTS ARE HEREBY DISCLAIMED. THE WEBSITE DOES NOT WARRANT THAT THE CONTENT, FILES, DATA, MATERIAL, ACCESS OR ANY COMBINATION OF THEM ARE FREE FROM ERRORS, VIRUSES OR INACCURACIES.
+        \n4.2 LIMITATION OF LIABILITY
+        \nIN NO EVENT WILL THE WEBSITE BE LIABLE FOR ANY DAMAGES ARISING OUT OF OR CONNECTED WITH THE USE OF ITS WEBSITE, INCLUDING ANY LOST PROFITS, LOST SAVINGS, LOSS OF BUSINESS OR OTHER SPECIAL, INCIDENTAL, INDIRECT, DIRECT, OR CONSEQUENTIAL DAMAGES OF ANY KIND, EVEN IF THE WEBSITE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+        \n
+                \nArticle Five Miscellaneous
+        \n5.1     Indemnification. You agree to indemnify, defend, and hold harmless the Company and the Website and its officers, employees, agents, shareholders, directors and suppliers against all claims, liability, damages, costs and expenses, including reasonable legal fees and expenses, resulting out of any violation of these Terms of Use or any activity related to your account (including negligent or wrongful conduct) or the Materials you submitted.
+        \n5.2     Right to change these terms of use. The Company reserves the right to change these Terms of Use at any time without prior or post notice. Any and all changes will take effect immediately upon posting. By continuing to use the Website after changes are made to the Terms of Use, you are indicating your consent to the new terms and conditions.
+        \n5.3     The Website reserves the right to refuse service to anyone or any business with or without reason.
+        \n5.4     The Website further reserves the right to introduce new features, functionalities and/or applications to the Service or to future versions of the Service. All new features, functionalities, applications, modifications, upgrades and alterations shall be governed by these terms and conditions, unless otherwise stated by the Website.
+    </string>
+
+    <!-- Message Status -->
+    <string name="message_sending">Sending</string>
+    <string name="message_failed">Failed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="asset_statements" translatable="false">[{\n  \"relation\": [\"delegate_permission/common.handle_all_urls\"],\n  \"target\": {\n    \"namespace\": \"web\",\n    \"site\": \"https://promeets.us\",\n  }\n}]</string>
+
+    <!-- Permission -->
+    <string name="title_dialog">Tips</string>
+    <string name="message_permission_rationale">Grant the following permissions to continue:\n\n%1$s</string>
+    <string name="message_permission_always_failed">We need these permissions, please give us permission in the settings:\n\n%1$s</string>
+    <string name="setting">Settings</string>
+    <string name="resume">Resume</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="no">NO</string>
+</resources>

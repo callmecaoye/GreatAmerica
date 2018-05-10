@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/std_padding"
+    android:paddingRight="@dimen/std_padding"
+    android:paddingTop="@dimen/xs_padding"
+    android:paddingBottom="@dimen/xs_padding">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/white">
+        <ImageView android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:transitionName="image"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/std_padding"
+            android:paddingBottom="@dimen/std_padding"
+            android:paddingLeft="@dimen/sm_padding"
+            android:paddingRight="@dimen/sm_padding">
+            <TextView android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textColor="@color/pm_gray"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="16sp"
+                    android:textColor="@color/pm_dark"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <TextView android:id="@+id/price"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/primary"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xs_padding"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

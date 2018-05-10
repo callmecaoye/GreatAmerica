@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compileSdk
+    buildToolsVersion rootProject.buildTools
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdk
+        targetSdkVersion rootProject.targetSdk
+        versionCode 2
+        versionName "1.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // For backwards compatibility, not necessarily needed
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+
+    // Google's OAuth library for OpenID Connect
+    // See https://code.google.com/p/google-oauth-java-client/wiki/Setup
+    implementation('com.google.oauth-client:google-oauth-client:1.21.0') {
+        exclude group: 'com.google.http-client', module: 'google-http-client'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        exclude group: 'com.google.http-client', module: 'google-http-client-jackson'
+        exclude group: 'junit', module: 'junit'
+        exclude group: 'com.google.guava', module: 'guava-jdk5'
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    // Google's JSON parsing, could be replaced with Jackson
+    implementation('com.google.api-client:google-api-client-gson:1.21.0') {
+        exclude group: 'com.google.api-client', module: 'google-api-client'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+    }
+    // For backwards compatibility, not necessarily needed
+    implementation('com.google.api-client:google-api-client-android:1.21.0') {
+        exclude group: 'com.google.android', module: 'android'
+        exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        exclude group: 'com.google.guava', module: 'guava-jdk5'
+        exclude group: 'junit', module: 'junit'
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+        exclude group: 'com.google.http-client', module: 'google-http-client-jackson2'
+    }
+
+    // Easier HTTP requests, not necessarily needed
+    implementation('com.github.kevinsawicki:http-request:6.0') {
+        exclude group: 'junit', module: 'junit'
+    }
+
+    // Encryption for Pre Loli devices
+    implementation 'com.madgag.spongycastle:core:1.54.0.0'
+}

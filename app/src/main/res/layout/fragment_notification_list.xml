@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="?attr/actionBarSize">
+        <RelativeLayout android:id="@+id/activity_notification_list_notification_btn"
+            android:background="@drawable/left_select"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+            <ImageView android:id="@+id/activity_notification_list_notification_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_notify_white"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_notification_list_unread_notification_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/activity_notification_list_notification_icon"
+                android:gravity="center"
+                android:background="@drawable/circle_message_number_select"
+                android:textColor="@color/primary"
+                android:layout_centerVertical="true"
+                android:text="0"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/activity_notification_list_message_btn"
+            android:background="@drawable/right_unselect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+            <ImageView android:id="@+id/activity_notification_list_message_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_email_primary"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:id="@+id/activity_notification_list_unread_message_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/activity_notification_list_message_icon"
+                android:gravity="center"
+                android:background="@drawable/circle_message_number_unselect"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:text="0"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View style="@style/bg_line"/>
+
+    <TabHost
+        android:id="@+id/activity_notification_list_tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/activity_notification_list_tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <TextView android:layout_margin="13dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:text="Notifications"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+                    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                        android:id="@+id/refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color">
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/activity_notification_list_notification_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_notification_list_tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <TextView android:layout_margin="13dp"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:text="Messages"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/channel_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color"
+                        android:overScrollMode="never"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+
+
+</LinearLayout>

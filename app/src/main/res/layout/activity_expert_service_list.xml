@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.ExpertServiceListActivity">
+    <TextView android:id="@+id/add_topic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:text="Add Topic"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+    <ListView android:id="@+id/service_list"
+        android:layout_above="@id/add_topic"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

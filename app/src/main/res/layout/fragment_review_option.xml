@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:paddingBottom="13dp"
+    android:gravity="bottom">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/btn_solid_white">
+        <TextView android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Edit"
+            android:textColor="@color/pm_dark"
+            android:textSize="18sp"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <View style="@style/bg_line"/>
+        <TextView android:id="@+id/copy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Copy"
+            android:textColor="@color/pm_dark"
+            android:textSize="18sp"
+            android:foreground="?android:attr/selectableItemBackground"/>
+        <View style="@style/bg_line"/>
+        <TextView android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:foreground="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/btn_solid_white"
+        android:gravity="center"
+        android:text="Cancel"
+        android:textColor="@color/pm_dark"
+        android:textSize="18sp"
+        android:foreground="?android:attr/selectableItemBackground"/>
+</LinearLayout>

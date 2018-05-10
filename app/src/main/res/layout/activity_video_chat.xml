@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <FrameLayout android:id="@+id/remote_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_dark" />
+
+    <RelativeLayout android:id="@+id/remote_place_holder"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp">
+        <com.promeets.android.custom.WaveView
+            android:id="@+id/wave_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/photo1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/app_logo"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:layout_marginLeft="200dp"/>
+        <TextView android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/wave_view"
+            android:layout_marginTop="@dimen/full_padding"
+            android:layout_centerHorizontal="true"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <FrameLayout android:id="@+id/local_video_view_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d8d8d8">
+        <FrameLayout android:id="@+id/local_video_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView android:id="@+id/switch_camera"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/ic_switch_camera"
+            android:layout_marginBottom="8dp"
+            android:onClick="onSwitchCameraClicked"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <!-- Control Layer -->
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+        <FrameLayout android:id="@+id/awaiting_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/app_icon" />
+            <TextView android:id="@+id/name"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="16dp"
+                android:text="name"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="100dp"
+                android:text="Awaiting Response..."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <Chronometer android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="90dp"
+            android:format="%s"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <LinearLayout android:id="@+id/control_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView android:id="@+id/mute_video"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:onClick="onLocalVideoMuteClicked"
+                android:src="@drawable/ic_mute_video_off" />
+            <ImageView android:id="@+id/hang_up"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:onClick="onEncCallClicked"
+                android:src="@drawable/ic_hang_up" />
+            <ImageView android:id="@+id/mute_audio"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_weight="1"
+                android:onClick="onLocalAudioMuteClicked"
+                android:src="@drawable/ic_mute_off" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/std_padding">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/yes"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@android:color/transparent"
+            app:backgroundTint="@color/white"
+            app:elevation="5dp"/>
+        <TextView android:id="@+id/yes_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="YES"
+            android:elevation="@dimen/std_padding"
+            android:textColor="@color/primary"
+            android:textSize="24sp"/>
+    </FrameLayout>
+    <FrameLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/full_padding">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/no"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@android:color/transparent"
+            app:backgroundTint="@color/white"
+            app:elevation="5dp"/>
+        <TextView android:id="@+id/no_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="NO"
+            android:elevation="@dimen/std_padding"
+            android:textColor="@color/primary"
+            android:textSize="24sp"/>
+    </FrameLayout>
+</LinearLayout>

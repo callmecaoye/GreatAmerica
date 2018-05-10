@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:layout_marginTop="24dp">
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Categories"
+            android:textSize="18sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <ImageView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            android:padding="15dp"
+            android:src="@drawable/ic_cate" />
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_subcategories_service_search_tab_list"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp">
+        <ImageView
+            android:id="@+id/cate_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/cate_name"
+            android:gravity="center_vertical"
+            android:textColor="@color/pm_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Category"
+            android:layout_toRightOf="@id/cate_image"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <ImageView android:id="@+id/filter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_filter" />
+    </RelativeLayout>
+
+    <TextView android:id="@+id/no_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:gravity="center"
+        android:text="We are working on finding more experts in this category"
+        android:textColor="@color/pm_gray"
+        android:visibility="gone"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView android:id = "@+id/activity_subcategories_service_search_service_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:dividerHeight="0dp"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
+
+    <View android:id="@+id/trans_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/transparent_black"/>
+    <include android:id="@+id/filter_view"
+        layout="@layout/view_cate_filter"
+        android:visibility="gone"/>
+    <include android:id="@+id/cate_view"
+        layout="@layout/view_cate_all"
+        android:visibility="gone"/>
+</FrameLayout>

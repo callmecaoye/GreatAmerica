@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<android.support.v7.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="13dp"
+    android:layout_marginRight="13dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="5dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="19dp"
+        android:paddingBottom="19dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/list_search_service_image"
+            android:layout_gravity="top"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView android:id="@+id/list_search_service_title"
+                android:textColor="@color/pm_dark"
+                android:textSize="16sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+            <TextView android:id="@+id/list_search_service_author"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pm_dark"
+                android:text="Aaron John"/>
+                <TextView android:id="@+id/list_search_service_price"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/primary"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            </LinearLayout>
+            <TextView android:id="@+id/list_search_service_position"
+                android:textSize="13sp"
+                android:textColor="@color/pm_gray"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Position"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</FrameLayout>

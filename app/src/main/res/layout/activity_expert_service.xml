@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+    <LinearLayout android:id="@+id/root_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <!-- Topic -->
+        <TextView android:id="@+id/title_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Topic"
+            android:textColor="@color/pm_dark"
+            android:textSize="20sp"
+            fontPath="fonts/OpenSans-Bold.ttf"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+        <EditText android:id="@+id/txt_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_border_gray"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLines="5"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/pm_dark"
+            android:textSize="14sp"/>
+
+        <!-- Duration & Price -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="3dp"
+            android:text="Duration &amp; Price"
+            android:textColor="@color/pm_dark"
+            android:textSize="20sp"
+            fontPath="fonts/OpenSans-Bold.ttf"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:text="Duration"
+            android:textColor="@color/pm_dark"
+            android:textSize="18sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <com.weiwangcn.betterspinner.library.BetterSpinner
+            android:id="@+id/duration"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:dropDownHeight="200dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/black"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:text="Price"
+            android:textColor="@color/pm_dark"
+            android:textSize="18sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <com.promeets.android.custom.EditTextWithPrefix
+            android:id="@+id/rate_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="$ "
+            android:hint="Please enter the rate"
+            android:singleLine="true"
+            android:inputType="number"
+            android:theme="@style/MyEditText"/>
+
+
+        <!-- Description -->
+        <TextView android:id="@+id/title_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Description"
+            android:textColor="@color/pm_dark"
+            android:textSize="20sp"
+            fontPath="fonts/OpenSans-Bold.ttf"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+        <EditText android:id="@+id/txt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_border_gray"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:maxLines="10"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/pm_dark"
+            android:textSize="14sp"/>
+
+        <TextView android:id="@+id/finish"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/btn_solid_primary"
+            android:gravity="center"
+            android:text="Finish"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

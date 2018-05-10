@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:orientation="vertical"
+    android:paddingTop="24dp">
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp">
+            <View android:id="@+id/primary_line"
+                android:layout_width="0dp"
+                android:layout_weight="0"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/line_primary"/>
+            <View android:id="@+id/gray_line"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="2dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/line_gray"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Appointment"
+                    android:textSize="10sp"/>
+                <View android:id="@+id/circle1"
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_solid_gray"/>
+            </LinearLayout>
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Confirm"
+                    android:textSize="10sp"/>
+                <View android:id="@+id/circle2"
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_solid_gray"/>
+            </LinearLayout>
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Payment"
+                    android:textSize="10sp"/>
+                <View android:id="@+id/circle3"
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_solid_gray"/>
+            </LinearLayout>
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Meet"
+                    android:textSize="10sp"/>
+                <View android:id="@+id/circle4"
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_solid_gray"/>
+            </LinearLayout>
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+            <View android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="2"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Evaluation"
+                    android:textSize="10sp"/>
+                <View android:id="@+id/circle5"
+                    android:layout_height="10dp"
+                    android:layout_width="10dp"
+                    android:background="@drawable/circle_solid_gray"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <View style="@style/bg_line"/>
+</LinearLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include android:id="@+id/header_lay"
+        layout="@layout/view_process_status"/>
+    <LinearLayout android:id="@+id/bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center">
+        <TextView android:id="@+id/proceed"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_solid_grey"
+            android:enabled="false"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:gravity="center"
+            android:text="Proceed"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/header_lay"
+        android:layout_above="@id/bottom_lay"
+        android:overScrollMode="never">
+        <LinearLayout android:id="@+id/layout_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/bg_color"
+            android:paddingBottom="20dp"
+            >
+
+            <!-- Topic detail -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:paddingTop="16dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/topic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="2"
+                        android:textColor="@color/pm_dark"
+                        android:textSize="15sp"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+                        <TextView android:id="@+id/exp_name"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/pm_dark"
+                            android:textSize="15sp" />
+                        <TextView android:id="@+id/orig_price"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/pm_gray"
+                            android:textSize="15sp" />
+                        <TextView android:id="@+id/price"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/position"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pm_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Order Summary-->
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="13dp"
+                android:textSize="16sp"
+                android:textColor="@color/pm_dark"
+                android:text="Order Summary"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/btn_solid_white"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <FrameLayout android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView android:id="@+id/total_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:text="$100 / 1 Hours"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <TextView android:id="@+id/total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:text="$100"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
+                    <View style="@style/bg_line"
+                        android:layout_gravity="bottom"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/balance_amount_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone">
+                    <TextView android:id="@+id/balance_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:text="$0"
+                        android:textColor="@color/pm_gray"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <View style="@style/bg_line"
+                        android:layout_gravity="bottom"/>
+
+                    <CheckBox android:id="@+id/balance_checkbox"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:button="@drawable/custom_checkbox"
+                        android:paddingLeft="10dp"
+                        android:text="Pay with balance"
+                        android:textColor="@color/pm_dark" />
+                </FrameLayout>
+                <FrameLayout android:id="@+id/deduct_amount_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:text="Promo Code"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <TextView android:id="@+id/deduct_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:text="$0"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                </FrameLayout>
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+                    <EditText android:id="@+id/promo_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:background="@drawable/btn_border_gray"
+                        android:maxLines="1"
+                        android:gravity="center_vertical"/>
+                    <TextView android:id="@+id/promo_code_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:background="@drawable/btn_border_gray"
+                        android:gravity="center"
+                        android:text="Apply"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/invalid_code_txt"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="left"
+                        android:gravity="left|center"
+                        android:textSize="12sp"
+                        android:text="Sorry, there was an error.\nPlease check the code"
+                        android:textColor="@color/material_red"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <TextView android:id="@+id/cancel_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right"
+                        android:gravity="center"
+                        android:text="Remove"
+                        android:textColor="@color/primary"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                </FrameLayout>
+                <View style="@style/bg_line"/>
+                <FrameLayout android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|bottom"
+                        android:text="Total"
+                        android:textSize="18sp"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <TextView android:id="@+id/final_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:text="$0"
+                        android:textSize="18sp"
+                        android:textColor="@color/pm_dark"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Payment methods -->
+            <LinearLayout android:id="@+id/payment_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="13dp"
+                android:textSize="16sp"
+                android:textColor="@color/pm_dark"
+                android:text="Payment methods"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/btn_solid_white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+                <com.promeets.android.custom.NoScrollListView
+                    android:id="@+id/card_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:dividerHeight="0dp"
+                    android:divider="@null"/>
+                <LinearLayout android:id ="@+id/activity_checkout_add_card"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white">
+                    <ImageView android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/card_default"/>
+                    <TextView android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pm_dark"
+                        android:text="Add New Credit Card"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:drawableRight="@drawable/arrow_right"/>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

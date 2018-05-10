@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:descendantFocusability="beforeDescendants">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/btn_solid_white">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Withdraw"
+            android:textColor="@color/pm_dark"
+            android:textSize="18sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Select account to withdraw"
+            android:textColor="@color/pm_dark"/>
+
+        <ListView android:id="@+id/email_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="1px"
+            android:divider="#99BBBBBB"/>
+
+        <View style="@style/bg_line"/>
+        <TextView android:id="@+id/add_account"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Create new account"
+            android:textColor="@color/pm_dark"/>
+        <View style="@style/bg_line"/>
+        <TextView android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/pm_dark"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:background="@drawable/btn_solid_white">
+    <ImageView android:id="@+id/icon"
+        android:layout_height="60dp"
+        android:layout_width="60dp"
+        android:src="@drawable/ic_error"/>
+    <TextView android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="Message"
+        android:textColor="@color/pm_dark"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+    <TextView android:id="@+id/ok"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/selector_primary_bg"
+        android:gravity="center"
+        android:text="OK"
+        android:textColor="@drawable/selector_primary_txt"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+    <LinearLayout android:id="@+id/options_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_border_gray"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/pm_gray"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/selector_primary_bg"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@drawable/selector_primary_txt"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+    </LinearLayout>
+</LinearLayout>

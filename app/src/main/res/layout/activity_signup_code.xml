@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="38dp"
+    android:paddingRight="38dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="We have sent verification code to your account, please verify!"
+        android:textColor="#C44A4A4A"
+        android:textStyle="bold"/>
+
+    <LinearLayout android:id="@+id/input_layout_code"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <ImageView android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:padding="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_password"/>
+        <me.zhanghai.android.materialedittext.MaterialTextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:theme="@style/MyTextLabel">
+            <me.zhanghai.android.materialedittext.MaterialEditText
+                android:id="@+id/input_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#C44A4A4A"
+                android:inputType="number"
+                android:hint="Verify Code" />
+        </me.zhanghai.android.materialedittext.MaterialTextInputLayout>
+        <TextView android:id="@+id/resend_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:text="Resend Code"
+            android:textSize="14sp"
+            android:textColor="@color/em_black_38"/>
+    </LinearLayout>
+
+    <Button android:id="@+id/btn_next"
+        style="@style/MyButton"
+        android:layout_marginTop="44dp"
+        android:text="SUBMIT"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+</LinearLayout>

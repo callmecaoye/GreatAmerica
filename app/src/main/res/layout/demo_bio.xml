@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="250dp"
+    android:paddingLeft="@dimen/full_padding"
+    android:paddingRight="@dimen/full_padding"
+    android:paddingBottom="@dimen/full_padding"
+    android:background="@color/transparent_black">
+    <com.daasuu.bl.BubbleLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="8dp"
+        app:bl_arrowDirection="top"
+        app:bl_arrowPosition="@dimen/xl_padding"
+        app:bl_arrowHeight="16dp"
+        app:bl_arrowWidth="32dp"
+        app:bl_cornersRadius="6dp">
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/demo_bio"/>
+    </com.daasuu.bl.BubbleLayout>
+</FrameLayout>

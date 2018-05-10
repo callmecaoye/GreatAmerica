@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<android.support.v7.widget.CardView
+    android:id="@+id/card_root"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/std_padding"
+    android:layout_marginRight="@dimen/std_padding"
+    android:layout_marginTop="@dimen/xs_padding"
+    android:layout_marginBottom="@dimen/xs_padding"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="5dp">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/std_padding">
+        <TextView android:id="@+id/service_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/pm_dark"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/sm_padding">
+            <TextView android:id="@+id/service_price"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textColor="@color/primary"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <TextView android:id="@+id/service_duration"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="@color/pm_gray"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <TextView android:id="@+id/service_status"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</FrameLayout>
+
+
+

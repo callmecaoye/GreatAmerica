@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:mode="normal"
+        app:dragEdge="right"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Your secondary layout here -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+            <TextView android:id="@+id/delete"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:background="@color/material_red"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Delete"
+                android:textColor="@color/white"/>
+        </FrameLayout>
+
+
+
+
+        <RelativeLayout android:id="@+id/content_lay"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white">
+            <ImageView android:id="@+id/check"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/ic_unchoose"/>
+
+            <ImageView android:id ="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/check"
+                android:layout_marginLeft="@dimen/std_padding"
+                android:layout_centerVertical="true"
+                android:src="@drawable/card_default"/>
+
+            <TextView android:id="@+id/number"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/pm_dark"
+                android:text="*0000"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/image"
+                android:layout_toEndOf="@+id/image"
+                android:layout_marginStart="@dimen/full_padding" />
+        </RelativeLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+    <View style="@style/bg_line"/>
+</LinearLayout>

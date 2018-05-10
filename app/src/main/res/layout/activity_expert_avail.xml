@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:overScrollMode="never">
+    <LinearLayout android:id="@+id/root_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="24dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <!-- Availability -->
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="My Availability"
+            android:textColor="@color/pm_dark"
+            android:textSize="20sp"
+            fontPath="fonts/OpenSans-Bold.ttf"/>
+        <CheckBox android:id="@+id/avail0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:button="@drawable/custom_checkbox"
+            android:paddingLeft="10dp"
+            android:text="Pick your time slots"
+            android:textColor="@color/pm_dark"/>
+        <include layout="@layout/view_time_slot"/>
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+            <CheckBox android:id="@+id/avail1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/custom_checkbox"
+                android:paddingLeft="10dp"
+                android:text="Sync your calendar"
+                android:textColor="@color/pm_dark"/>
+            <TextView android:id="@+id/calendar_prev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Preview"
+                android:textColor="@color/pm_gray"/>
+        </RelativeLayout>
+        <LinearLayout android:id="@+id/sync_calendar_layer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <TextView android:id="@+id/sync_google"
+                android:layout_height="45dp"
+                android:layout_width="110dp"
+                android:paddingRight="10dp"
+                android:text="Google"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:gravity="center|right"
+                android:background="@drawable/google_sync_grey"/>
+            <TextView android:id="@+id/sync_outlook"
+                android:layout_height="45dp"
+                android:layout_width="110dp"
+                android:layout_marginLeft="20dp"
+                android:paddingRight="10dp"
+                android:text="Outlook"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:gravity="center|right"
+                android:background="@drawable/outlook_sync_grey" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+            <CheckBox android:id="@+id/avail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_checkbox"
+                android:paddingLeft="10dp"
+                android:textColor="@color/pm_dark"/>
+            <TextView android:id="@+id/avail2_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't show calendar availability.\nI will still schedule appointments individually."
+                android:textColor="@color/pm_dark"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:text="My preferred Location"
+            android:textColor="@color/pm_dark"
+            android:textSize="18sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <FrameLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <fragment android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"/>
+            <View android:id="@+id/map_front"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/em_transparent"/>
+        </FrameLayout>
+        <com.promeets.android.custom.NoScrollListView
+            android:id="@+id/location_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#99BBBBBB"
+            android:dividerHeight="1px"/>
+        <View android:id="@+id/loc_divider"
+            style="@style/bg_line"
+            android:layout_marginBottom="15dp"/>
+        <ImageView android:id="@+id/add_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_expand_round"/>
+
+        <TextView android:id="@+id/submit"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:background="@drawable/btn_solid_primary"
+            android:text="Submit"
+            android:textColor="@color/white"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

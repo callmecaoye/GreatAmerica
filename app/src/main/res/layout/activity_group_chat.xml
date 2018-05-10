@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_group_chat_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.GroupChatActivity"
+    tools:ignore="MissingPrefix" >
+    <FrameLayout android:id="@+id/title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="24dp"
+        android:background="@color/bg_color"
+        android:layout_alignParentTop="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <TextView android:id="@+id/target"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+            android:text="Promeets"
+            android:textSize="16sp"
+            android:textColor="@color/pm_dark"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+    </FrameLayout>
+
+    <LinearLayout android:id="@+id/layout_group_chat_chatbox"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:minHeight="48dp">
+        <View android:layout_above="@id/layout_group_chat_chatbox"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#DfDfDf"/>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton android:id="@+id/button_group_chat_upload"
+                android:src="@drawable/ic_add_black_24dp"
+                android:background="?attr/selectableItemBackground"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Upload file"
+                android:layout_gravity="bottom"/>
+            <EditText android:id="@+id/edittext_group_chat_message"
+                android:hint="Enter message"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:maxLines="6"/>
+            <Button android:id="@+id/button_group_chat_send"
+                android:text="Send"
+                android:textSize="14dp"
+                android:textColor="@color/primary"
+                android:textAllCaps="false"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@id/layout_group_chat_chatbox"
+        android:layout_below="@id/title_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_group_chat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="4dp"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"/>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_group_chat_current_event"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="@dimen/std_padding"
+            android:layout_marginRight="@dimen/std_padding"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_group_chat_current_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <TextView android:id="@+id/set_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/tag_solid_green"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="Set a time and location"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

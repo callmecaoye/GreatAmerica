@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants">
+
+        <include android:id="@+id/header_lay"
+            layout="@layout/view_process_status"/>
+
+        <Button android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/primary"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textAllCaps="false"/>
+
+        <ScrollView android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/submit_btn"
+            android:layout_below="@id/header_lay"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+            <LinearLayout android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:orientation="vertical">
+                <!-- Service info -->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:paddingTop="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/activity_user_request_setting_service_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop" />
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+                        <TextView android:id="@+id/activity_user_request_setting_service_topic"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:textColor="@color/pm_dark"
+                            android:textSize="15sp" />
+                        <LinearLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/activity_user_request_setting_service_name"
+                                fontPath="fonts/OpenSans-SemiBold.ttf"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/pm_dark"
+                                android:textSize="15sp" />
+                            <TextView
+                                android:id="@+id/activity_user_request_setting_original_service_price"
+                                fontPath="fonts/OpenSans-SemiBold.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/pm_gray"
+                                android:textSize="15sp" />
+                            <TextView
+                                android:id="@+id/activity_user_request_setting_service_price"
+                                fontPath="fonts/OpenSans-SemiBold.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/primary"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/position"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/pm_gray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Question Card-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="13dp"
+                    android:background="@drawable/btn_solid_white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_concern"/>
+                        <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:text="Let the expert know your questions and concerns."
+                            android:textColor="@color/pm_dark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/activit_user_request_setting_why"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/btn_border_gray"
+                        android:focusable="false"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:lines="6"
+                        android:maxLines="6"
+                        android:padding="10dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/pm_dark"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- About Me Card-->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/btn_solid_white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_about_me"/>
+                        <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:text="Tell the expert about yourself."
+                            android:textColor="@color/pm_dark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <EditText android:id="@+id/activity_user_request_setting_about_me"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/btn_border_gray"
+                        android:focusable="false"
+                        android:gravity="top|left"
+                        android:hint="What's your name? What are you working on? Just graduated? Starting a new venture? Interesting facts? We want to get to know you."
+                        android:inputType="textMultiLine"
+                        android:lines="6"
+                        android:maxLines="6"
+                        android:padding="10dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/pm_dark"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!--Location Card-->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/btn_solid_white"
+                    android:orientation="vertical"
+                    android:paddingTop="13dp">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:gravity="center_vertical">
+                        <ImageView android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_loc"/>
+                        <TextView android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:text="Set Meeting Location"
+                            android:textColor="@color/pm_dark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <View style="@style/divider"/>
+
+                    <CheckedTextView android:id="@+id/meeting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Option 1: In Person Meeting"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:drawableRight="@drawable/custom_checkbox"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"/>
+                    <LinearLayout android:id="@+id/meeting_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="13dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <FrameLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <fragment xmlns:tools="http://schemas.android.com/tools"
+                                xmlns:map="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/map"
+                                android:name="com.google.android.gms.maps.SupportMapFragment"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="15dp"/>
+                            <View android:id="@+id/map_front"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:background="@color/em_transparent"/>
+                        </FrameLayout>
+
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Expert's preferred location:"
+                            android:textColor="@color/primary"/>
+                        <com.promeets.android.custom.NoScrollListView
+                            android:id="@+id/expert_location_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="#99BBBBBB"
+                            android:dividerHeight="1px"/>
+
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Your proposed location:"
+                            android:textColor="@color/primary"/>
+                        <com.promeets.android.custom.NoScrollListView
+                            android:id="@+id/user_location_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="#99BBBBBB"
+                            android:dividerHeight="1px"/>
+                        <ImageView android:id="@+id/add_location0"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_expand_round"/>
+
+                    </LinearLayout>
+                    <View style="@style/divider"/>
+
+                    <CheckedTextView android:id="@+id/call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Option 2: Online Call"
+                        android:textSize="16sp"
+                        android:drawableRight="@drawable/custom_checkbox"
+                        android:drawablePadding="10dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:paddingBottom="13dp"/>
+                    <LinearLayout android:id="@+id/call_layer"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="13dp"
+                        android:background="#F9F9F9"
+                        android:orientation="vertical">
+                        <!--<Spinner android:id="@+id/timezone_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>-->
+                        <TextView android:id="@+id/timezone_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textSize="12sp"
+                            android:text="*The time will be displayed base on your timezone"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!-- Time Card-->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/btn_solid_white"
+                    android:orientation="vertical"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp">
+                        <ImageView android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_time"/>
+                        <TextView android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:text="Set Meeting Time"
+                            android:textColor="@color/pm_dark"
+                            android:textSize="16sp"/>
+                        <ImageView android:id="@+id/add_time"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_expand_round"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/time_list_lay"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <View style="@style/divider"/>
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="13dp"
+                            android:paddingRight="13dp"
+                            android:text="Your proposed time:"
+                            android:textColor="@color/primary"/>
+                        <com.promeets.android.custom.NoScrollListView
+                            android:id="@+id/time_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="13dp"
+                            android:paddingRight="13dp"
+                            android:divider="#99BBBBBB"
+                            android:dividerHeight="1px"/>
+                        <ImageView android:id="@+id/add_time0"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_expand_round"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <include layout="@layout/popup_input"
+        android:visibility="gone"/>
+</FrameLayout>
+
+
+

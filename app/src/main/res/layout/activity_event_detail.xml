@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:background="@color/bg_color">
+    <FrameLayout android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:src="@drawable/ic_share" />
+        <View style="@style/bg_line"
+            android:layout_gravity="bottom"/>
+    </FrameLayout>
+
+    <TextView android:id="@+id/book"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_gradient"
+        android:gravity="center"
+        android:text="Tickets"
+        android:textSize="18sp"
+        android:textColor="@drawable/selector_btn"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/book"
+        android:overScrollMode="never">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+            <ImageView android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:minHeight="170dp"
+                android:maxHeight="200dp"
+                android:scaleType="centerCrop"
+                android:transitionName="image"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@color/white">
+                <TextView android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/pm_dark"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_clock"/>
+                    <TextView android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pm_gray"/>
+                </LinearLayout>
+                <View style="@style/bg_line"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_pin_white"/>
+                    <TextView android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/pm_gray"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Recap -->
+            <TextView android:id="@+id/recap_title"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="13dp"
+                android:text="Recap"
+                android:textSize="16sp"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <android.support.v7.widget.CardView
+                android:id="@+id/recap_layer"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                app:cardCornerRadius="5dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true"
+                app:cardElevation="0dp">
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="13dp">
+                    <WebView android:id="@+id/recap"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="15dp"
+                        android:scrollbars="none"/>
+                    <TextView android:id="@+id/more_recap"
+                        android:visibility="gone"
+                        android:background="@drawable/bg_gradient_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_alignParentBottom="true"
+                        android:paddingTop="30dp"
+                        android:text="Show More"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Going -->
+            <RelativeLayout android:id="@+id/going_lay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone">
+                <TextView fontPath="fonts/OpenSans-SemiBold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_centerVertical="true"
+                    android:text="Are you going?"
+                    android:textColor="@color/pm_dark"
+                    android:textSize="16sp" />
+                <LinearLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical">
+                    <TextView android:id="@+id/going_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginRight="@dimen/std_padding"
+                        android:text="Can't go"
+                        android:visibility="gone"/>
+                    <ImageView android:id="@+id/yes"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="@dimen/full_padding"
+                        android:src="@drawable/yes_bolder" />
+                    <ImageView android:id="@+id/no"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="@dimen/full_padding"
+                        android:src="@drawable/no_bolder" />
+                </LinearLayout>
+                <View style="@style/bg_line"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"/>
+            </RelativeLayout>
+
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="13dp"
+                android:text="Description"
+                android:textSize="16sp"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                app:cardCornerRadius="5dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true"
+                app:cardElevation="0dp">
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="13dp">
+                    <WebView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:scrollbars="none"/>
+                    <TextView android:id="@+id/more_descript"
+                        android:visibility="gone"
+                        android:background="@drawable/bg_gradient_light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_alignParentBottom="true"
+                        android:paddingTop="30dp"
+                        android:text="Show More"
+                        android:textSize="12sp"
+                        android:textColor="@color/primary"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <!-- Review -->
+            <TextView android:id="@+id/review_title"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="13dp"
+                android:text="Review"
+                android:textSize="16sp"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <android.support.v7.widget.CardView
+                android:id="@+id/review_lay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                app:cardCornerRadius="5dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="true"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/review_list"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </android.support.v7.widget.RecyclerView>
+                    <TextView android:id="@+id/view_more"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="right"
+                        android:paddingRight="13dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/primary"
+                        android:text="Read all reviews"/>
+                    <View android:id="@+id/start_review_divider"
+                        style="@style/bg_line"/>
+                    <TextView android:id="@+id/start_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/pm_gray"
+                        android:text="Start Your Review"
+                        android:drawableLeft="@drawable/ic_expand_round"
+                        android:drawablePadding="10dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

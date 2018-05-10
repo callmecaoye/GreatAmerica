@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View android:id="@+id/cate_trans_layer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_frag_title"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:text="Categories"
+        android:textSize="15sp"
+        android:textColor="@color/pm_dark"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cate_title"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"/>
+    <ScrollView android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:overScrollMode="never">
+        <LinearLayout android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

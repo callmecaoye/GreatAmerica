@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:background="@color/white"
+    tools:ignore="MissingPrefix"
+    android:animateLayoutChanges="true">
+    <LinearLayout android:id="@+id/setting"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/my_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:text="My Profile"
+            android:textColor="@color/pm_dark"
+            android:textSize="16sp" />
+        <View style="@style/bg_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView android:id="@+id/reset_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:text="Reset Password"
+            android:textColor="@color/pm_dark"
+            android:textSize="16sp" />
+        <View android:id="@+id/reset_password_divider"
+            style="@style/bg_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView android:id="@+id/clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:text="Clear Cache"
+            android:textColor="@color/pm_dark"
+            android:textSize="16sp" />
+        <View style="@style/bg_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <TextView
+            android:id="@+id/log_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:text="Log out"
+            android:textColor="@color/material_red"
+            android:textSize="16sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <View style="@style/bg_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout android:id="@+id/help"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/expert_handbook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:gravity="left|center"
+            android:text="Experts Handbook"
+            android:textColor="@color/pm_dark"
+            android:textSize="16sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:drawableRight="@drawable/arrow_right"/>
+        <View style="@style/bg_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/handbooks"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/exp_guideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@color/white"
+            android:gravity="left|center"
+            android:text="Expert Behavioral Guideline"
+            android:textColor="@color/pm_dark"
+            android:textSize="16sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:drawableRight="@drawable/arrow_right"/>
+        <View style="@style/bg_line"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+</LinearLayout>

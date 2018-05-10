@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Add Credit Card"
+                android:textColor="@color/pm_dark"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Save"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                />
+
+            <View
+                style="@style/bg_line"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/std_padding">
+
+                <TextView
+                    fontPath="fonts/OpenSans-SemiBold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment methods"
+                    android:textColor="@color/pm_dark"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/std_padding"
+                    android:background="@drawable/btn_solid_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/std_padding">
+                    <!-- Name -->
+                    <TextView
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name on Card"
+                        android:textColor="@color/pm_dark"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/sm_padding"
+                        android:background="@drawable/btn_border_gray"
+                        android:gravity="left"
+                        android:hint="Name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:textColor="@color/pm_dark" />
+
+                    <TextView
+                        android:id="@+id/error_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xs_padding"
+                        android:text="Please enter name on card"
+                        android:textColor="@color/material_red"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <!-- Card Number-->
+                    <TextView
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/std_padding"
+                        android:text="Card Number"
+                        android:textColor="@color/pm_dark"
+                        android:textSize="16sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/sm_padding">
+
+                        <EditText
+                            android:id="@+id/number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_border_gray"
+                            android:gravity="left"
+                            android:hint="Card Number"
+                            android:inputType="phone"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textColor="@color/pm_dark" />
+
+                        <ImageView
+                            android:id="@+id/card_image"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right|center"
+                            android:src="@drawable/card_default" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/error_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Please enter card number"
+                        android:textColor="@color/material_red"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/std_padding"
+                        android:orientation="horizontal">
+                        <!--Date-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                fontPath="fonts/OpenSans-SemiBold.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="EXP Date"
+                                android:textColor="@color/pm_dark"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/sm_padding"
+                                android:background="@drawable/btn_border_gray"
+                                android:gravity="left"
+                                android:hint="MM/YY"
+                                android:inputType="date"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:textColor="@color/pm_dark" />
+
+                            <TextView
+                                android:id="@+id/error_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Please enter expire date"
+                                android:textColor="@color/material_red"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <!--CVV-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                fontPath="fonts/OpenSans-SemiBold.ttf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="CVV"
+                                android:textColor="@color/pm_dark"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/sm_padding"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/cvv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="@dimen/xs_padding"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_border_gray"
+                                    android:gravity="left"
+                                    android:hint="3 digits"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:padding="10dp"
+                                    android:textColor="@color/pm_dark" />
+
+                                <TextView
+                                    android:id="@+id/tips"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/btn_border_gray"
+                                    android:gravity="center"
+                                    android:text="\?"
+                                    android:textColor="@color/pm_gray"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/error_cvv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Please enter CVV"
+                                android:textColor="@color/material_red"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/tip_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_black"
+        android:visibility="gone"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/btn_solid_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="26dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="26dp">
+
+            <TextView
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Security Code"
+                android:textColor="@color/pm_dark"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/card_cvv" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The CID/Security Code is the 3-digit number printed by the signature line on back of the card; for American Express cards, it's the 4-digit number on the front of the card above the account number."
+                android:textColor="@color/pm_dark" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

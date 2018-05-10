@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout android:id="@+id/tab1"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/icon1"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:src="@drawable/ic_home_default"
+            android:scaleType="fitCenter"
+            android:clickable="false"/>
+        <TextView android:id="@+id/name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Home"
+            android:textSize="10sp"
+            android:textColor="@color/em_black_54"/>
+    </LinearLayout>
+
+
+    <LinearLayout android:id="@+id/tab2"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/icon2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:src="@drawable/ic_search_default"
+            android:scaleType="fitCenter"
+            android:clickable="false"/>
+        <TextView android:id="@+id/name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Search"
+            android:textSize="10sp"
+            android:textColor="@color/em_black_54"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/tab5"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/icon5"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:src="@drawable/ic_app_default"
+            android:scaleType="centerCrop"
+            android:clickable="false"/>
+        <TextView android:id="@+id/name5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Appointment"
+            android:textSize="10sp"
+            android:textColor="@color/em_black_54"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/tab6"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/icon6"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:src="@drawable/ic_event_default"
+            android:scaleType="centerCrop"
+            android:clickable="false"/>
+        <TextView android:id="@+id/name6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Events"
+            android:textSize="10sp"
+            android:textColor="@color/em_black_54"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/tab3"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/icon3"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_msg_default"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:clickable="false"/>
+            <TextView
+                android:layout_gravity="top"
+                android:id="@+id/msg_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/ease_unread_count_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_alignTop="@id/icon3"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        <TextView android:id="@+id/name3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Message"
+            android:textSize="10sp"
+            android:textColor="@color/em_black_54"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/tab4"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/icon4"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:src="@drawable/ic_acc_default"
+            android:scaleType="centerCrop"
+            android:clickable="false"/>
+        <TextView android:id="@+id/name4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Account"
+            android:textSize="10sp"
+            android:textColor="@color/em_black_54"/>
+    </LinearLayout>
+</LinearLayout>

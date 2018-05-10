@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="13dp"
+    tools:ignore="MissingPrefix">
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/list_service_detail_review_user_icon"
+            android:layout_height="50dp"
+            android:layout_width="50dp"
+            android:src="@drawable/holder_user"/>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp">
+            <TextView android:id="@+id/list_service_detail_review_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/pm_dark"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <TextView android:id="@+id/list_service_detail_review_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/pm_gray"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:flexWrap="wrap"
+        app:alignItems="flex_start"
+        app:alignContent="flex_start"/>
+
+    <TextView
+        android:id="@+id/list_service_detail_review_topic"
+        fontPath="fonts/OpenSans-SemiBold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/pm_dark"
+        android:textSize="16sp" />
+
+    <at.blogc.android.views.ExpandableTextView
+        android:id="@+id/list_service_detail_review_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/pm_dark"
+        app:animation_duration="350"/>
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="right">
+        <TextView android:id="@+id/reply"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_border_primary"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="Reply"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <LinearLayout android:id="@+id/useful_lay"
+            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/btn_border_primary"
+            android:gravity="center">
+            <ImageView android:id="@+id/useful_img"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_thumb_primary"/>
+            <TextView android:id="@+id/useful_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="Useful"
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/view_reply_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
+        <View android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/dash_line"
+            android:layerType="software"/>
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/list_service_detail_review_expert_icon"
+                android:layout_height="50dp"
+                android:layout_width="50dp"
+                android:src="@drawable/holder_user"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp">
+                <TextView android:id="@+id/list_service_detail_review_expert_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/pm_dark"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <TextView android:id="@+id/list_service_detail_reply_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/pm_gray"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/pm_dark"/>
+
+
+
+
+
+
+        <LinearLayout android:id="@+id/edit_reply_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <EditText android:id="@+id/edit_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:background="@drawable/btn_border_gray"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:lines="6"
+                android:maxLines="6"
+                android:textColor="@color/pm_dark"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="right">
+                <TextView android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_border_gray"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:text="Cancel"
+                    android:textColor="@color/pm_light"
+                    android:textSize="12sp"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <TextView android:id="@+id/update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_primary_bg"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="center"
+                    android:text="Update"
+                    android:textColor="@drawable/selector_primary_txt"
+                    android:textSize="12sp"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View android:id="@+id/divider"
+        style="@style/bg_line"/>
+</LinearLayout>
+    </ScrollView>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="@dimen/std_padding">
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Topic"
+                    android:textSize="20sp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sm_padding"
+                    android:text="Add your area of expertise to make it easier for others to understand what you want to share."/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/std_padding"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/full_padding"
+                android:paddingLeft="@dimen/full_padding"
+                android:paddingRight="@dimen/full_padding"
+                android:paddingBottom="@dimen/sm_padding">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Topic you can cover in an hour? *"/>
+                    <ImageView android:id="@+id/topic_img"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_ques"/>
+                </LinearLayout>
+                <EditText android:id="@+id/topic_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:theme="@style/MyEditText"/>
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sm_padding"
+                    android:text="Category" />
+                <LinearLayout android:id="@+id/cate_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/sm_padding"
+                    android:orientation="horizontal"
+                    android:background="@drawable/btn_border_navy"
+                    android:gravity="center_vertical">
+                    <TextView android:id="@+id/cate_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/std_padding"
+                        android:text="Select a category"
+                        android:textColor="#586a86"
+                        android:textSize="16sp"/>
+                    <View android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#B7C7DF"/>
+                    <ImageView android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:padding="10dp"
+                        android:src="@drawable/arrow_down_navy"/>
+                </LinearLayout>
+
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sm_padding"
+                    android:text="Tags" />
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="@dimen/sm_padding"
+                    android:orientation="horizontal"
+                    android:background="@drawable/btn_border_navy"
+                    android:gravity="center_vertical">
+                    <TextView android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:text="#"/>
+                    <View android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#B7C7DF"/>
+                    <EditText android:id="@+id/tag_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        android:inputType="text"/>
+                    <TextView android:id="@+id/add_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="@dimen/sm_padding"
+                        android:text="Add"
+                        android:textColor="@color/material_red"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <com.promeets.android.custom.NoScrollListView
+                    android:id="@+id/suggest_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_border_navy"
+                    android:visibility="gone"
+                    android:divider="@color/white"/>
+            </LinearLayout>
+            <com.promeets.android.custom.NoScrollListView
+                android:id="@+id/tag_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#b7c7df"
+                android:dividerHeight="1dp"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/std_padding"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/full_padding">
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Promeets Workshop"
+                    android:textSize="20sp"/>
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/sm_padding"
+                    android:text="Block a few different TIMES within the next 60 days for 1-2 hours to hold your first Promeets Workshop. To learn more about workshops, click here."/>
+                <LinearLayout android:id="@+id/book_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_border_navy"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/full_padding">
+                    <TextView android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/std_padding"
+                        android:text="Book a Time Now"
+                        android:textColor="#6b7c94"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <ImageView android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="10dp"
+                        android:src="@drawable/arrow_right_navy"/>
+                </LinearLayout>
+
+                <TextView android:id="@+id/workshop_txt"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/full_padding"
+                    android:background="@drawable/btn_border_prim"
+                    android:padding="@dimen/std_padding"
+                    android:gravity="center"
+                    android:textColor="@color/primary"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/std_padding"
+                android:background="@color/white"
+                android:gravity="bottom|center">
+                <TextView android:id="@+id/next_txt"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/std_padding"
+                    android:background="@drawable/btn_solid_primary"
+                    android:gravity="center"
+                    android:text="Continue"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <include android:id="@+id/demo_topic_lay"
+            layout="@layout/demo_topic"
+            android:visibility="gone"/>
+    </FrameLayout>
+</android.support.v4.widget.NestedScrollView>

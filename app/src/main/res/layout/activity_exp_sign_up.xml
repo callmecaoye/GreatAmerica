@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingTop="24dp"
+            android:background="@color/white">
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+                <ImageView android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_left"/>
+                <TextView android:id="@+id/toolbar_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Step 1"
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:layout_gravity="center"/>
+                <ImageView android:id="@+id/next"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_right"/>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout android:id="@+id/info_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar">
+            <include layout="@layout/view_survey_step2"/>
+
+            <com.promeets.android.custom.NoScrollViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:overScrollMode="never"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/li_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:visibility="gone">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:background="@color/white">
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+                <ImageView android:id="@+id/li_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/arrow_left"/>
+                <TextView android:id="@+id/li_skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/std_padding"
+                    android:layout_gravity="right"
+                    android:text="Skip"
+                    android:textColor="@color/navy"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            </FrameLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <ImageView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/bg_expert_sign"
+                android:scaleType="centerCrop"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/full_padding">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/logo_li4"/>
+                    <ImageView android:layout_width="30dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="@dimen/full_padding"
+                        android:layout_marginRight="@dimen/full_padding"
+                        android:src="@drawable/ic_import"/>
+                    <ImageView android:layout_width="90dp"
+                        android:layout_height="107dp"
+                        android:src="@drawable/ic_profile"/>
+                </LinearLayout>
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/full_padding"
+                    android:gravity="center"
+                    android:text="Contact info, profile \n picture, title, and bio"
+                    android:textColor="@color/navy"
+                    android:textSize="18sp"/>
+                <TextView android:id="@+id/li_import"
+                    android:layout_width="275dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/xl_padding"
+                    android:background="@drawable/btn_li2"
+                    android:gravity="center"
+                    android:text="Import from LinkedIn"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout android:id="@+id/thank_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:clickable="true"
+        android:visibility="gone">
+        <ImageView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_thank"
+            android:scaleType="centerCrop"/>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/std_padding"
+            android:layout_centerInParent="true">
+            <ImageView android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_thank"
+                android:layout_gravity="center_horizontal"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/full_padding"
+                android:gravity="center"
+                android:text="Thank you for your application!"
+                android:textSize="24sp"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Our community manager will call you at your selected time to complete your onboarding to become a Promeets Expert!"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

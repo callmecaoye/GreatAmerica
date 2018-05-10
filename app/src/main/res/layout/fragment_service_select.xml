@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:descendantFocusability="beforeDescendants">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical"
+        android:background="@color/bg_color">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:gravity="center"
+            android:text="Please Select A Topic"
+            android:textSize="16sp"
+            android:textColor="@color/pm_dark"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <View style="@style/bg_line"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/service_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+</LinearLayout>

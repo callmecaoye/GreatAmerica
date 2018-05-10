@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="62dp"
+    android:height="62dp"
+    android:viewportWidth="62"
+    android:viewportHeight="62">
+    <group
+        android:translateX="4"
+        android:translateY="2">
+        <path
+            android:fillColor="#fff"
+            android:fillType="evenOdd"
+            android:pathData="M 27 0 C 41.9116882454 0 54 12.0883117546 54 27 C 54 41.9116882454 41.9116882454 54 27 54 C 12.0883117546 54 0 41.9116882454 0 27 C 0 12.0883117546 12.0883117546 0 27 0 Z" />
+    </group>
+    <group
+        android:translateX="19"
+        android:translateY="17">
+        <path
+            android:fillColor="#222"
+            android:fillType="evenOdd"
+            android:pathData="M18.548 16.936V6.356a1.494 1.494 0 0 0-1.464-1.517H9.075a1.01 1.01 0 0 0-1.01 1.009c0 0.227 0.078 0.447 0.22 0.624l9.076 11.27 1.187-0.806" />
+        <path
+            android:fillColor="#222"
+            android:fillType="evenOdd"
+            android:pathData="M24.618 6.565a0.853 0.853 0 0 0-0.786-0.033l-6.451 3.024a0.753 0.753 0 0 0-0.446 0.676 v4.536c0 0.286 0.173 0.548 0.446 0.676l6.451 3.024c0.113 0.053 0.236 0.08 0.362 0.08 0.445 0 0.806-0.338 0.806 -0.756V7.207a0.747 0.747 0 0 0-0.382-0.642M4.022 4.839H1.559a1.568 1.568 0 0 0-1.53 1.6v12.795a1.568 1.568 0 0 0 1.53 1.6h15.243L4.022 4.838" />
+        <path
+            android:fillColor="#222"
+            android:fillType="evenOdd"
+            android:pathData="M18.553 18.548a0.802 0.802 0 0 1-0.802-0.801V6.442H8.866a0.802 0.802 0 1 1 0-1.603h8.949c0.867 0.019 1.556 0.736 1.54 1.603v11.305a0.802 0.802 0 0 1-0.802 0.801" />
+        <path
+            android:fillColor="#222"
+            android:fillType="evenOdd"
+            android:pathData="M24.196 18.713a0.797 0.797 0 0 1-0.35-0.082l-6.263-3.12a0.778 0.778 0 0 1-0.34-1.048 0.784 0.784 0 0 1 1.041-0.345l5.13 2.554V8.28l-5.13 2.555a0.784 0.784 0 0 1-1.047-0.356 0.778 0.778 0 0 1 0.346-1.039l6.262-3.119a0.784 0.784 0 0 1 1.134 0.698 v10.916a0.779 0.779 0 0 1-0.783 0.78 M19.57 24.952a0.784 0.784 0 0 1-0.612-0.294L0.17 1.267A0.778 0.778 0 0 1 0.295 0.17 a0.785 0.785 0 0 1 1.1 0.124 l18.787 23.391a0.778 0.778 0 0 1-0.612 1.267" />
+    </group>
+</vector>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/std_padding">
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload A Profile Picture"
+                android:textSize="20sp"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sm_padding"
+                android:text="Upload a profile picture to be displayed on your Expert Profile."/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/full_padding">
+            <ImageView android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_border_navy"
+                android:src="@drawable/ic_photo"
+                android:scaleType="centerInside"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/full_padding"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_warn"/>
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/sm_padding"
+                    android:text="A high-quality profile picture will improve your chances of booking more meetings. "
+                    android:textColor="#586a86"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="8dp"
+                android:layout_margin="@dimen/sm_padding">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/std_padding"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Example:"
+                        android:textColor="#586a86"/>
+                    <ImageView android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/demo_profile"
+                        android:layout_marginTop="@dimen/sm_padding"
+                        android:scaleType="center"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/std_padding"
+            android:background="@color/white"
+            android:gravity="bottom|center">
+            <TextView android:id="@+id/next_txt"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/std_padding"
+                android:background="@drawable/btn_solid_primary"
+                android:gravity="center"
+                android:text="Continue"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+
+    <!---->
+</FrameLayout>

@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fontPath="http://schemas.android.com/tools"
+    fontPath:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+    <com.promeets.android.custom.SearchBarLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Search"
+        android:textSize="16sp"/>
+
+
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout android:id="@id/root_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="26dp"
+                android:gravity="center">
+                <LinearLayout android:id="@+id/search_key_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Top Searches"
+                        android:textColor="@color/pm_gray"
+                        android:textSize="16sp"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                </LinearLayout>
+
+                <View android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/bg_color"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Trending Now"
+                    android:textColor="@color/pm_gray"
+                    android:textSize="16sp"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap"
+                    app:alignItems="flex_start"
+                    app:alignContent="flex_start"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView android:id="@+id/no_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="100dp"
+            android:gravity="center_horizontal"
+            android:text="Sorry, no results were found."
+            android:textColor="@color/pm_gray"
+            android:visibility="gone"/>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lvSearchList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

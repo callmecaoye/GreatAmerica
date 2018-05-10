@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/activity_expert_service_setting_time_picker_new"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView android:id="@+id/time_picker_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_close_white"
+            android:layout_centerVertical="true"/>
+        <TextView android:id="@+id/time_picker_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Save"
+            android:textColor="@color/primary"
+            android:textSize="18sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Select your availability"
+        android:textColor="@color/pm_dark"
+        android:textSize="18sp"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <!--Monday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Mon"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4" />
+            <FrameLayout android:id="@+id/mon_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+                <TextView android:id="@+id/mon_am"
+                    android:layout_height="25dp"
+                    android:layout_width="25dp"
+                    android:layout_gravity="center"
+                    android:text="AM"
+                    android:gravity="center"
+                    android:textColor="@color/pm_gray"
+                    android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+            <FrameLayout android:id="@+id/mon_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/mon_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+        <!--Tuesday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Tue"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4" />
+            <FrameLayout android:id="@+id/tue_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/tue_am"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="AM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+            <FrameLayout android:id="@+id/tue_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/tue_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+        <!--Wednesday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Wed"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4" />
+            <FrameLayout android:id="@+id/wed_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/wed_am"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="AM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+            <FrameLayout android:id="@+id/wed_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/wed_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+        <!--Thursday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Thur"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <FrameLayout android:id="@+id/thu_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/thu_am"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="AM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <FrameLayout android:id="@+id/thu_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/thu_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+        <!--Friday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Fri"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4" />
+            <FrameLayout android:id="@+id/fri_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/fri_am"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="AM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+            <FrameLayout android:id="@+id/fri_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/fri_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+        <!--Saturday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Sat"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4" />
+            <FrameLayout android:id="@+id/sat_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/sat_am"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="AM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+            <FrameLayout android:id="@+id/sat_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/sat_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+        <!--Sunday-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:text="Sun"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="4" />
+            <FrameLayout android:id="@+id/sun_am_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/sun_am"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="AM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2" />
+            <FrameLayout android:id="@+id/sun_pm_lay"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+            <TextView android:id="@+id/sun_pm"
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_gravity="center"
+                android:text="PM"
+                android:gravity="center"
+                android:textColor="@color/pm_gray"
+                android:textSize="16sp"/>
+            </FrameLayout>
+            <View android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <View style="@style/bg_line"
+            android:layout_marginTop="3dp"/>
+
+    </LinearLayout>
+</LinearLayout>
+

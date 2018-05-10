@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout android:id="@+id/activity_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/full_padding"
+        android:orientation="vertical">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/activity_checkout_expert_image"
+            android:layout_height="80dp"
+            android:layout_width="80dp"
+            android:layout_marginTop="@dimen/full_padding"
+            android:layout_gravity="center"
+            app:riv_corner_radius="5dp"
+            android:src="@drawable/app_icon"/>
+        <TextView android:id="@+id/version"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:layout_gravity="center"
+            android:text="Promeets version"
+            android:textColor="#8f8f8f"/>
+        <ImageView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:src="@drawable/img_about_me" />
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/full_padding"
+            android:layout_marginLeft="@dimen/sm_padding"
+            android:layout_marginRight="@dimen/sm_padding"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/em_black_87"
+            android:text="@string/about_us_text"/>
+        <TextView android:id="@+id/policy"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/full_padding"
+            android:textColor="@color/primary"
+            android:text="Terms of Use and Privacy Policy"/>
+    </LinearLayout>
+</ScrollView>

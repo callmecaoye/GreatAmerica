@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="38dp"
+    android:paddingRight="38dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <LinearLayout android:id="@+id/name_lay"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="52dp"
+        android:orientation="horizontal">
+        <ImageView android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_account"/>
+        <me.zhanghai.android.materialedittext.MaterialTextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyTextLabel">
+            <me.zhanghai.android.materialedittext.MaterialEditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#C44A4A4A"
+                android:inputType="text"
+                android:hint="Full Name"/>
+        </me.zhanghai.android.materialedittext.MaterialTextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/input_layout_email"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <ImageView android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_email"/>
+        <me.zhanghai.android.materialedittext.MaterialTextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyTextLabel">
+            <me.zhanghai.android.materialedittext.MaterialEditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#C44A4A4A"
+                android:inputType="textEmailAddress"
+                android:hint="Email" />
+        </me.zhanghai.android.materialedittext.MaterialTextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/input_layout_phone"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <ImageView android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_phone"/>
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/activity_sign_up_country_picker"
+            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@null"
+            app:defaultNameCode="US"
+            app:showFlag="false"
+            app:contentColor="#C44A4A4A"
+            app:hideNameCode="true"/>
+        <me.zhanghai.android.materialedittext.MaterialTextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MyTextLabel">
+            <me.zhanghai.android.materialedittext.MaterialEditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#C44A4A4A"
+                android:inputType="phone"
+                android:hint="Phone"/>
+        </me.zhanghai.android.materialedittext.MaterialTextInputLayout>
+    </LinearLayout>
+
+    <TextView android:id="@+id/promeets_policy_txt"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="11dp"
+        android:text="@string/promeets_policy"
+        android:textColor="#964A4A4A"
+        android:textSize="11sp" />
+
+    <Button android:id="@+id/btn_next"
+        style="@style/MyButton"
+        android:layout_marginTop="44dp"
+        android:text="Next"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+</LinearLayout>

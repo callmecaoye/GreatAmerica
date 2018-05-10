@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+    <LinearLayout android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+        <View style="@style/bg_line"/>
+        <LinearLayout android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginRight="26dp">
+        <ImageView android:id="@+id/activity_service_detail_like"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:src="@drawable/ic_like_outline"
+            android:scaleType="centerInside"/>
+        <Button
+            android:id="@+id/activity_service_detail_appointment_btn"
+            android:background="@drawable/btn_solid_primary"
+            android:layout_alignParentRight="true"
+            android:stateListAnimator="@null"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:minWidth="180dp"
+            android:layout_height="match_parent"
+            android:text="Make An Appointment"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            fontPath="fonts/OpenSans-Bold.ttf"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomBar">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="false"
+            app:elevation="0dp">
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:scrimVisibleHeightTrigger="90dp"
+                app:expandedTitleMarginEnd="10dp"
+                app:expandedTitleMarginStart="10dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                <RelativeLayout
+                    android:id="@+id/activity_service_detail_expert_small_photo_page_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                    <ImageView
+                        android:id="@+id/activity_service_detail_expert_full_size_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"/>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/activity_service_detail_expert_icon"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="70dp"
+                        android:scaleType="centerCrop"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp"/>
+                    <LinearLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingTop="24dp">
+                        <ImageView android:id="@+id/li_verify"
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/logo_li3"/>
+                        <ImageView android:id="@+id/fb_verify"
+                            android:visibility="gone"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/logo_fb3"/>
+                    </LinearLayout>
+                </RelativeLayout>
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="20dp"
+                    app:layout_collapseMode="pin" />
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_share"
+                    app:layout_collapseMode="pin" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <com.promeets.android.custom.HeadZoomScrollView
+            android:id="@+id/zoom_scroll_view"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                tools:ignore="MissingPrefix">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white">
+
+
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+                        <TextView android:id="@+id/activity_service_detail_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textColor="@color/pm_dark"
+                            android:textSize="22sp"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                        <com.willy.ratingbar.ScaleRatingBar
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srb_clearRatingEnabled="false"
+                            app:srb_drawableEmpty="@drawable/ic_star_off1"
+                            app:srb_drawableFilled="@drawable/ic_star_on1"
+                            app:srb_numStars="5"
+                            app:srb_starHeight="20dp"
+                            app:srb_starPadding="3dp"
+                            app:srb_starWidth="20dp"
+                            app:srb_stepSize="0.5"
+                            app:srb_clickable="false"
+                            app:srb_isIndicator="true"
+                            android:visibility="gone"/>
+                        <TextView android:id="@+id/meeting_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(0)"
+                            android:textColor="@color/primary"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+
+
+
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+                        <TextView android:id="@+id/activity_service_detail_position"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:maxLines="3"
+                            android:gravity="center_vertical"
+                            android:text="Position"
+                            android:textColor="@color/pm_gray"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                        <TextView android:id="@+id/activity_service_detail_want_meeting"
+                            android:layout_height="match_parent"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="right|top"
+                            android:layout_marginLeft="5dp"
+                            android:drawableLeft="@drawable/ic_like_gray"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="0"
+                            android:textColor="@color/pm_gray"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    </LinearLayout>
+                    <View style="@style/bg_line"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView android:id="@+id/activity_service_detail_location"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_pin_white"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="San Francisco"
+                        android:textColor="@color/pm_gray" />
+
+                    <View style="@style/bg_line"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_bag"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="Specialities"
+                        android:textColor="@color/pm_gray"
+                        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:id="@+id/flexBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        app:flexWrap="wrap"
+                        app:alignItems="flex_start"
+                        app:alignContent="flex_start"/>
+                    <View style="@style/bg_line"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout android:id="@+id/video_player_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/std_padding"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Video"
+                            android:textColor="@color/pm_gray"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                        <fragment android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+                            android:id="@+id/youtube_fragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+
+
+
+                    <!--About me-->
+                    <LinearLayout
+                        android:id = "@+id/about_me_main"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="About me"
+                            android:textColor="@color/pm_gray"
+                            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                    </LinearLayout>
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:is_auto_play="false"
+                        app:image_scale_type="fit_center"
+                        app:indicator_height="7dp"
+                        app:indicator_margin="5dp"
+                        app:indicator_width="7dp"
+                        app:indicator_drawable_selected="@drawable/circle_solid_primary"
+                        app:indicator_drawable_unselected="@drawable/circle_solid_transparent"/>
+                    <FrameLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp">
+                        <WebView android:id="@+id/expand_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginBottom="30dp"
+                            android:scrollbars="none" />
+                        <TextView android:id="@+id/expand_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_gradient_light"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom|right"
+                            android:paddingTop="50dp"
+                            android:paddingBottom="5dp"
+                            android:text="See More"
+                            android:textSize="12sp"
+                            android:textColor="@color/primary"/>
+                    </FrameLayout>
+
+                    <View android:id="@+id/logo_divider"
+                        android:visibility="gone"
+                        style="@style/bg_line"
+                        android:layout_marginBottom="10dp"/>
+                    <ImageView android:id="@+id/logo"
+                        android:visibility="gone"
+                        android:layout_height="30dp"
+                        android:layout_width="30dp"
+                        android:src="@drawable/logo_li2"/>
+                </LinearLayout>
+
+                <!--Topic-->
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="What you will learn"
+                    android:textSize="18sp"
+                    android:textColor="@color/pm_dark"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_service_detail_service_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:overScrollMode="never"/>
+
+                <!--Review-->
+                <TextView android:id="@+id/activity_service_detail_review_title"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="Reviews"
+                    android:textSize="18sp"
+                    android:textColor="@color/pm_dark"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/activity_service_detail_review_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    app:cardCornerRadius="5dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardElevation="0dp">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/activity_service_detail_review_list"
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </android.support.v7.widget.RecyclerView>
+                        <TextView android:id="@+id/activity_service_detail_view_more"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:gravity="right"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="26dp"
+                            android:textColor="@color/primary"
+                            android:text="Read all reviews"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--recommendation-->
+                <TextView
+                    android:id="@+id/activity_service_detail_recommend_title"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Discover more"
+                    android:textColor="@color/pm_dark"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    app:cardCornerRadius="5dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:cardUseCompatPadding="true"
+                    app:cardElevation="0dp">
+                    <android.support.v7.widget.RecyclerView
+                        android:focusable="false"
+                        android:id="@+id/activity_service_detail_recommend_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </android.support.v7.widget.CardView>
+
+                <!--Security Plan-->
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="26dp"
+                    android:text="What we promise"
+                    android:textSize="18sp"
+                    android:textColor="@color/pm_dark"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <TextView android:id="@+id/security"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="26dp"
+                    android:paddingRight="26dp"
+                    android:textColor="@color/pm_gray"/>
+                <TextView android:id="@+id/activity_service_detail_customer_service"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:text="Contact Customer Service"/>
+            </LinearLayout>
+        </com.promeets.android.custom.HeadZoomScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

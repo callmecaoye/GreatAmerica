@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_referral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ReferralActivity">
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="REFERRAL PROGRAM"
+        android:textColor="@color/em_black_87"
+        android:textStyle="bold"
+        android:textSize="28sp" />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="GET MONEY FOR EVERY REFERRAL"
+        android:textColor="@color/primary"
+        android:textStyle="bold|italic"
+        android:textSize="16sp" />
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="EARN "
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/primary"
+            android:textStyle="bold|italic"
+            android:textSize="16sp" />
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="$150 + "
+            android:textColor="#5F91BB"
+            android:textStyle="bold|italic"
+            android:textSize="22sp" />
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="COMMISIONS"
+            android:textColor="@color/primary"
+            android:textStyle="bold|italic"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+        <TextView android:id="@+id/txt_link"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginRight="200dp"
+            android:text="LEARN MORE\nABOUT OUR\nINCENTIVE PROGRAM\n> > >"
+            android:lineSpacingMultiplier="1.2"
+            android:gravity="right"
+            android:textColor="@color/em_black_38"
+            android:textStyle="bold"/>
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/img_referral"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR INVITE CODE" />
+        <FrameLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp">
+            <TextView android:id="@+id/txt_code"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/txt_gray_border"
+                android:gravity="center_vertical"
+                android:textColor="@color/em_black_87"/>
+            <TextView android:id="@+id/txt_copy"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Copy"
+                android:textColor="@color/primary"
+                android:gravity="center"/>
+        </FrameLayout>
+        <TextView android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_solid_primary"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Send Referral"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

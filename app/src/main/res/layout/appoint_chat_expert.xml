@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:mode="normal"
+    app:dragEdge="right"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Your secondary layout here -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp">
+        <TextView android:id="@+id/delete"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@color/material_red"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Delete"
+            android:textColor="@color/white"/>
+    </FrameLayout>
+
+    <!-- Your main layout here -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView android:id="@+id/content"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/pm_dark"/>
+    </LinearLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

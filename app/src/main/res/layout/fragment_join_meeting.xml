@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="@dimen/full_padding">
+    <ImageView android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_sandbox"/>
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xl_padding"
+        android:layout_marginBottom="@dimen/xl_padding"
+        android:gravity="center"
+        android:text="It's not your scheduled meeting time yet."
+        android:textSize="16sp"/>
+    <TextView android:id="@+id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_solid_green"
+        android:padding="13dp"
+        android:gravity="center"
+        android:text="Got it!"
+        android:textColor="@color/white"/>
+    <TextView android:id="@+id/join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/std_padding"
+        android:background="@drawable/btn_solid_primary"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="Join Meeting Anyway"
+        android:textColor="@color/white"/>
+</LinearLayout>

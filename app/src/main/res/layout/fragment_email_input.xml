@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="@dimen/full_padding">
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:text="Please enter your email to receive an exclusive offer"
+            android:textSize="16sp"
+            android:gravity="center"/>
+        <EditText android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/full_padding"
+            android:singleLine="true"
+            android:hint="Email"
+            android:textSize="16sp"/>
+        <TextView android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_solid_primary_round"
+            android:paddingTop="@dimen/sm_padding"
+            android:paddingBottom="@dimen/sm_padding"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_marginTop="@dimen/std_padding"
+            android:text="Submit"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@color/white"
+        android:layout_gravity="center_horizontal"/>
+    <ImageView android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/ic_gift_blue"
+        android:layout_gravity="center_horizontal"/>
+</FrameLayout>

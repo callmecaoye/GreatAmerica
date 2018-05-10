@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="13dp"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp">
+    <LinearLayout android:id="@+id/list_notification_list_lay"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/list_notification_list_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/holder_user"/>
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/list_notification_list_title"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    fontPath="fonts/OpenSans-SemiBold.ttf"/>
+                <TextView android:id="@+id/list_notification_list_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="13sp"
+                    android:text="Yesterday"
+                    android:textColor="@color/pm_gray"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView android:id="@+id/list_notification_list_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:textSize="13sp"
+                    android:textColor="@color/pm_gray"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/list_notification_unread_mark"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@color/primary"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/bg_line"
+        android:layout_marginTop="13dp"/>
+</LinearLayout>

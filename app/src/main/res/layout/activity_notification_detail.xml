@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:padding="20dp"
+    tools:context=".activity.NotificationDetailActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/notification_detail_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/app_icon"/>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+            <TextView android:id="@+id/notification_detail_title"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textColor="@color/pm_dark"
+                android:textSize="16sp"
+                fontPath="fonts/OpenSans-SemiBold.ttf"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+            <TextView android:id="@+id/notification_detail_date"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/pm_gray"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/notification_detail_content"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/pm_dark"/>
+</LinearLayout>

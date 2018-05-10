@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="116dp"
+    android:height="116dp"
+    android:viewportWidth="116"
+    android:viewportHeight="116">
+
+    <path
+        android:fillColor="#F2F7FF"
+        android:fillType="evenOdd"
+        android:pathData="M58.5 10C84.734 10 106 31.266 106 57.5S84.734 105 58.5 105 11 83.734 11 57.5 32.266 10 58.5 10" />
+    <path
+        android:fillType="evenOdd"
+        android:strokeColor="#BBD3F8"
+        android:strokeWidth="2"
+        android:pathData="M58 1c31.48 0 57 25.52 57 57s-25.52 57-57 57S1 89.48 1 58 26.52 1 58 1" />
+    <path
+        android:fillColor="#9FD9F7"
+        android:fillType="evenOdd"
+        android:pathData="M37 32h10v-5H37z" />
+    <group
+        android:translateX="37"
+        android:translateY="27">
+        <path
+            android:fillColor="#B7D2FB"
+            android:fillType="evenOdd"
+            android:pathData="M0 61h42v-5H0z" />
+        <path
+            android:fillColor="#ECF1EF"
+            android:fillType="evenOdd"
+            android:pathData="M6 5v12.18L21 30V5H6" />
+        <path
+            android:fillColor="#CDD9DD"
+            android:fillType="evenOdd"
+            android:pathData="M36 5v12.18L21 30V5h15" />
+        <path
+            android:fillColor="#ECF1EF"
+            android:fillType="evenOdd"
+            android:pathData="M6 55V42.82L21 30v25H6" />
+        <path
+            android:fillColor="#CDD9DD"
+            android:fillType="evenOdd"
+            android:pathData="M36 55V42.82L21 30v25h15" />
+        <path
+            android:fillColor="#FFB742"
+            android:fillType="evenOdd"
+            android:pathData="M21 45L9 55h24L21 45M21 26l8-7H13l8 7" />
+        <path
+            android:fillColor="#B7D2FB"
+            android:fillType="evenOdd"
+            android:pathData="M0 5h42V0H0z" />
+        <path
+            android:fillColor="#C3D6F4"
+            android:fillType="evenOdd"
+            android:pathData="M0 61h10v-5H0z" />
+    </group>
+</vector>

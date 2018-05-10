@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF8D59</color>
+    <color name="primary_dark">#EE3A3A</color>
+
+    <color name="pm_black">#1E1E1E</color>
+    <color name="pm_dark">#4A4A4A</color>
+    <color name="pm_gray">#979797</color>
+    <color name="pm_light">#BBBBBB</color>
+    <color name="pm_white">#F5F5F5</color>
+    <color name="bg_color">#F5F5F5</color>
+
+    <color name="em_transparent">#00FFFFFF</color>
+    <color name="transparent_black">#99000000</color>
+
+    <!--black color-->
+    <color name="black">#000000</color>
+    <color name="em_black_87">#dd232323</color>
+    <color name="em_black_54">#89232323</color>
+    <color name="em_black_38">#61232323</color>
+    <color name="em_black_12">#1e232323</color>
+
+    <!--white color-->
+    <color name="white">#FFFFFF</color>
+    <color name="em_white_87">#ddffffff</color>
+    <color name="em_white_54">#89ffffff</color>
+    <color name="em_white_38">#61ffffff</color>
+    <color name="em_white_12">#1effffff</color>
+    <color name="em_gray">#50cccccc</color>
+
+    <color name="material_red">#F44336</color>
+    <color name="material_green">#23DD91</color>
+    <color name="navy">#6B7C94</color>
+    <color name="blue">#9fd9f7</color>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/steps"
+        layout="@layout/view_survey_step"
+        android:visibility="gone"/>
+
+    <TextView android:id="@+id/next"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_shadow_top"
+        android:gravity="center"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        android:text="Continue"
+        fontPath="fonts/OpenSans-SemiBold.ttf"/>
+
+    <FrameLayout android:id="@+id/welcome_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_survey"
+            android:scaleType="centerCrop"/>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/full_padding"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your opinion matters!"
+                android:textColor="@color/primary"
+                android:textSize="26sp"
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/full_padding"
+                android:text="Please take a minute of your time to fill out this survey and help us improve your experience! Your answers will be confidential."
+                fontPath="fonts/OpenSans-SemiBold.ttf"/>
+            <TextView android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/full_padding"
+                android:layout_marginRight="@dimen/full_padding"
+                android:layout_marginTop="56dp"
+                android:layout_marginBottom="@dimen/full_padding"
+                android:gravity="center"
+                android:background="@drawable/tag_solid_primary"
+                android:text="Take the survey"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/content_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/steps"
+        android:layout_above="@id/next"
+        android:overScrollMode="never"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/full_padding">
+            <include layout="@layout/view_survey_questions"/>
+
+            <include android:id="@+id/yes_no_layer"
+                layout="@layout/view_yes_no"
+                android:visibility="gone"/>
+
+            <include android:id="@+id/seek_bar_layer"
+                layout="@layout/view_seek_bar" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout android:id="@+id/thank_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <ImageView android:id="@+id/thank"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_thumb"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/full_padding"
+            android:text="THANK YOU!"
+            android:textSize="24sp"
+            android:textColor="@color/primary"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+    </LinearLayout>
+</RelativeLayout>

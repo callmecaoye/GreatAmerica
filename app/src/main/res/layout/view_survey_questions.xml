@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- EXP Q1 -->
+    <LinearLayout android:id="@+id/step1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 1"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/txt_q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="How would you rate the meeting with?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+    <!-- EXP Q2 -->
+    <LinearLayout android:id="@+id/step2_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 2"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/txt_q2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="Did come on time?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+    <!-- EXP Q3 -->
+    <LinearLayout android:id="@+id/step3_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 3"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/txt_q3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="Did come on prepared?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+    <!-- EXP Q4 -->
+    <LinearLayout android:id="@+id/step4_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 4"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/txt_q4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="Was easy to communicate with?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+    <!-- EXP Q5 -->
+    <LinearLayout android:id="@+id/step5_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 5"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/txt_q5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="How likely would you refer to an investor?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+    <!-- EXP Q6 -->
+    <LinearLayout android:id="@+id/step6_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/q6_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 6"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:id="@+id/txt_q6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="Did give helpful feedback during the meeting?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+
+    <!-- EXP Q7 -->
+    <LinearLayout android:id="@+id/step7_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView android:id="@+id/q7_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 7"
+            fontPath="fonts/OpenSans-SemiBold.ttf"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_padding"
+            android:textSize="18sp"
+            android:text="How would you rate the Promeets App?"
+            fontPath="fonts/OpenSans-SemiBold.ttf"
+            android:lines="3"
+            android:maxLines="3"/>
+    </LinearLayout>
+</LinearLayout>
